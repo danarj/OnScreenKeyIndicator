@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Numlock));
             this.numLockPictureBox = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numLockPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // numLockPictureBox
             // 
             this.numLockPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numLockPictureBox.Image = global::OnScreenKeyDisplay.Properties.Resources.numlockoff;
             this.numLockPictureBox.Location = new System.Drawing.Point(10, 10);
             this.numLockPictureBox.Name = "numLockPictureBox";
             this.numLockPictureBox.Size = new System.Drawing.Size(105, 83);
@@ -51,6 +52,13 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "NumLock Sttaus";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // Numlock
             // 
@@ -81,5 +89,6 @@
 
         private System.Windows.Forms.PictureBox numLockPictureBox;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

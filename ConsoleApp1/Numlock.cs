@@ -2,20 +2,25 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace OnScreenKeyDisplay
 {
     public partial class Numlock : Form
     {
         // private string numLockOnImage =
-        private const string NumLockOnImage = "C:/onscreenkeydisplay/images/numlock.png";
-        private const string NumLockOffImage = "C:/onscreenkeydisplay/images/numlockoff.png";
+        private const string NumLockOnImage = "C:/onscreenkeydisplay/images/NumlockOn.png";
+        private const string NumLockOffImage = "C:/onscreenkeydisplay/images/NumlockOff.png";
+        private const string NotifyNumLockOnImage = "C:/onscreenkeydisplay/images/numlock.ico";
+        private const string NotifyNumLockOffImage = "C:/onscreenkeydisplay/images/numlockoff.png";
         private const int DisplayDuration = 5;
         private int tick = 1;
 
         public Numlock()
         {
             InitializeComponent();
+            var numLockIsOn = IsKeyLocked(Keys.NumLock);
+            notifyIcon1.Icon = numLockIsOn ? Properties.Resources.NumlockOnIcon : Properties.Resources.NumlockOffIcon;
         }
 
         public void ChangeNumLockStatus(bool status)
@@ -23,8 +28,11 @@ namespace OnScreenKeyDisplay
             try
             {
                 tick = 1;
-                numLockPictureBox.Image =
-                    Image.FromFile(status ? NumLockOnImage : NumLockOffImage);
+                numLockPictureBox.Image = status ? Properties.Resources.NumlockOn : Properties.Resources.NumlockOff;
+                // numLockPictureBox.Image =
+                //     Image.FromFile(status ? NumLockOnImage : NumLockOffImage);
+                // notifyIcon1.Icon = new Icon(status ? NotifyNumLockOnImage : NotifyNumLockOffImage);
+                notifyIcon1.Icon = status ? Properties.Resources.NumlockOnIcon : Properties.Resources.NumlockOffIcon;
             }
             catch (Exception exception)
             {
@@ -57,6 +65,10 @@ namespace OnScreenKeyDisplay
         private void Numlock_MouseClick(object sender, MouseEventArgs e)
         {
             Hide();
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
         }
     }
 }

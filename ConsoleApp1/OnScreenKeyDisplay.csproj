@@ -71,20 +71,20 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="images\Numlock-tuşunu-biosdan-aktif-etme.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="images\numlock.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="images\numlockoff.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="Resources\NumlockOffIcon.ico" />
+    <None Include="Resources\NumlockOnIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumlockOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NumlockOff.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

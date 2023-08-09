@@ -22,7 +22,7 @@ namespace OnScreenKeyDisplay
                 _hookID = SetHook(_proc);
                 Application.Run();
                 UnhookWindowsHookEx(_hookID);
-                // Console.ReadLine();
+                // Console.ReadKey();
             }
             catch (Exception exception)
             {

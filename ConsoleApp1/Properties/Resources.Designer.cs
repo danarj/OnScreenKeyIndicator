@@ -63,30 +63,40 @@ namespace OnScreenKeyDisplay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap numlock {
+        internal static System.Drawing.Bitmap NumlockOff {
             get {
-                object obj = ResourceManager.GetObject("numlock", resourceCulture);
+                object obj = ResourceManager.GetObject("NumlockOff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon NumlockOffIcon {
+            get {
+                object obj = ResourceManager.GetObject("NumlockOffIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Numlock_tuşunu_biosdan_aktif_etme {
+        internal static System.Drawing.Bitmap NumlockOn {
             get {
-                object obj = ResourceManager.GetObject("Numlock-tuşunu-biosdan-aktif-etme", resourceCulture);
+                object obj = ResourceManager.GetObject("NumlockOn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Bitmap numlockoff {
+        internal static System.Drawing.Icon NumlockOnIcon {
             get {
-                object obj = ResourceManager.GetObject("numlockoff", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("NumlockOnIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
     }
