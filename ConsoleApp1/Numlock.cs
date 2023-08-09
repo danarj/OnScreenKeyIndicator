@@ -8,11 +8,6 @@ namespace OnScreenKeyDisplay
 {
     public partial class Numlock : Form
     {
-        // private string numLockOnImage =
-        private const string NumLockOnImage = "C:/onscreenkeydisplay/images/NumlockOn.png";
-        private const string NumLockOffImage = "C:/onscreenkeydisplay/images/NumlockOff.png";
-        private const string NotifyNumLockOnImage = "C:/onscreenkeydisplay/images/numlock.ico";
-        private const string NotifyNumLockOffImage = "C:/onscreenkeydisplay/images/numlockoff.png";
         private const int DisplayDuration = 5;
         private int tick = 1;
 
