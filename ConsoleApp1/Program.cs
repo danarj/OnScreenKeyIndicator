@@ -9,7 +9,7 @@ namespace OnScreenKeyDisplay
     internal class Program
     {
         private const int WH_KEYBOARD_LL = 13;
-        private const int WM_KEYDOWN = 0x0104;
+        private const int WM_KEYDOWN = 0x0100;
         private static LowLevelKeyboardProc _proc = HookCallback;
         private static IntPtr _hookID = IntPtr.Zero;
         private static Numlock _numlock = new Numlock();
